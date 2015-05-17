@@ -1,10 +1,11 @@
 var express = require('express');
-var db = require('mongoskin').db('mongodb://localhost:27017/ccexp');
+//var db = require('mongoskin').db('mongodb://localhost:27017/ccexp');
 //mongodb://user:pass@host:port/dbname
 var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  res.redirect('/');
 //  var newThing = {text:"here's another"};
 //  db.collection('foo').insert(newThing, function(err, res){
 //    if (err) throw err;
