@@ -12,7 +12,9 @@ router.get('/', function(req, res, next) {
 //  });
   //get some record from the DB
   db.collection('foo').find().toArray(function(err, result) {
-    if (err) throw err;
+    if (err) {
+      res.redirect('/');
+    };
     console.log(result);
     res.send("There are " + result.length + " things in this collection");
 //    res.send(result);
