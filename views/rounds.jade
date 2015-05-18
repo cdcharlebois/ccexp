@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	div.container
+		div.page-header
+			h1 Rounds
+		div.row
+			each val in r
+				p #{val.score} &mdash; #{val.course}
+			
