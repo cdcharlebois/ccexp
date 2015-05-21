@@ -1,5 +1,4 @@
 var express = require('express');
-var db = require('mongoskin').db('mongodb://localhost:27017/ccexp');
 var router = express.Router();
 
 // ---- //
@@ -7,7 +6,7 @@ var router = express.Router();
 // ---- //
 router.get('/', function(req, res, next) {
 	var rounds;
-	db.collection('rounds').find().toArray(function(err, result){
+	req.db.collection('rounds').find().toArray(function(err, result){
 		rounds = (!err) ? result : []; 
 		res.render('rounds/index', {r: rounds} );
 	});  
@@ -29,7 +28,7 @@ router.post('/', function(req, res, next) {
 		score : req.body.score,
 		course : req.body.course
 	};
-	db.collection('rounds').insert(newRound, function(err, result) {
+	req.db.collection('rounds').insert(newRound, function(err, result) {
 		res.redirect('/golf/rounds');
 	});
 });
