@@ -5,8 +5,8 @@ block content
     img.main.center-block.img-rounded(src='images/circle.png')
   div.container
     div.row-header
-      h1(style="text-align:center") Conner Charlebois
-      h3(style="text-align:center") <a href="/golf">Golf</a> | Work | Coffee | Adventures
+      h1.text-center Conner Charlebois
+      h3.text-center <a href="/golf">Golf</a> | Work | Coffee | Adventures
   br
   div.container
     div.row
@@ -15,11 +15,16 @@ block content
           Born and raised in a small town just outside of Toronto, 
           ON, I attended (and graduated from) 
           <a href="http://www.bentley.edu">Bentley University</a> in 
-          Waltham, MA. I work as a solution consultant for the Adobe 
-          Marketing Cloud, and I help change the way marketers work. 
-          When I'm not working, I dabble in web development, pretend 
-          I know how to dance, and cross my fingers that the Maple 
-          Leafs will one day make the playoffs again.
+          Waltham, MA. I work as an implementation consultant for the Adobe 
+          Marketing Cloud and I help change the way marketers work. 
+          When I'm not working, I'm a competitive golfer, restaurant explorer,
+          Netflix enthusiast and coffee connoisseur.
+    div.row
+      div.col-md-8.col-md-offest-2.col-sm-12
+        h6.text-center You can connect with me here:
+        ul
+          each social in s
+            li.social <a href="#{social.link}">#{social.name}</a>
         //
           p.
           Lorem ipsum dolor sit amet, consectetur adip<span style="color:red">*</span>isicing elit, sed do eiusmod <span style="color:red">*</span>tempor incididunt ut labore et dolore magna aliqua.
