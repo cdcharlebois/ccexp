@@ -5,9 +5,10 @@ block content
 		div.page-header
 			h1 Enter New Round
 		div.row
-			form(action="/golf" method="post")
-				label score
-				input(name="score", type="number")
-				label course
-				input(name="course", type="text")
-				input(type="submit", value="enter")
+			div.col-sm-12
+				form(action="/golf/rounds/" method="post")
+					p score
+					input(name="score", type="number")
+					p course
+					input(name="course", type="text")
+					input.btn.btn-primary(type="submit", value="Post")

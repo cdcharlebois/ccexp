@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	div.container
+		div.page-header
+			h1.cc-rel Rounds 
+				a.btn.btn-default.cc-right.cc-success(href="/golf/rounds/create") +
+		div.row
+			div.col-sm-12
+				each val in r
+					p #{val.score} &mdash; #{val.course}
+			
