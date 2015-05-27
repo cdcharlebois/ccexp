@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	div.container
+		div.page-header
+			h1 Thoughts
+		each t in thoughts
+			div.row
+				div.col-md-8.col-md-offest-2
+					h2 #{t.title}
+					div #{t.text}

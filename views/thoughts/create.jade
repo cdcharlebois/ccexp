@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	div.container
+		div.page-header
+			h1 Enter New Thought
+		div.row
+			div.col-sm-12
+				form(action="/thoughts" method="post")
+					p Title
+					input(name="title", type="text")
+					p Text
+					textarea(name="text", type="", style="width:100%; border:0")
+					input.btn.btn-primary(type="submit", value="Think!")
